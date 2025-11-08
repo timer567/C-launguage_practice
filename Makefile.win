@@ -1,15 +1,15 @@
-# Project: dev_cpp_代码练习
+# Project: 汉诺塔问题
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = 猜数字小游戏.o
-LINKOBJ  = 猜数字小游戏.o
+OBJ      = HanoiTowers.o
+LINKOBJ  = HanoiTowers.o
 LIBS     = -L"C:/Users/dong/Downloads/apps/Dev-Cpp/MinGW64/lib" -L"C:/Users/dong/Downloads/apps/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
 INCS     = -I"C:/Users/dong/Downloads/apps/Dev-Cpp/MinGW64/include" -I"C:/Users/dong/Downloads/apps/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/dong/Downloads/apps/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Users/dong/Downloads/apps/Dev-Cpp/MinGW64/include" -I"C:/Users/dong/Downloads/apps/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/dong/Downloads/apps/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/dong/Downloads/apps/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = dev_cpp_代码练习.exe
+BIN      = 汉诺塔问题.exe
 CXXFLAGS = $(CXXINCS) -g3
 CFLAGS   = $(INCS) -g3
 RM       = rm.exe -f
@@ -22,7 +22,7 @@ clean: clean-custom
 	${RM} $(OBJ) $(BIN)
 
 $(BIN): $(OBJ)
-	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-猜数字小游戏.o: 猜数字小游戏.c
-	$(CC) -c 猜数字小游戏.c -o 猜数字小游戏.o $(CFLAGS)
+HanoiTowers.o: HanoiTowers.cpp
+	$(CPP) -c HanoiTowers.cpp -o HanoiTowers.o $(CXXFLAGS)
